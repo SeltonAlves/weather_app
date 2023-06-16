@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Weather</string>
+    <string name="windy">Windy</string>
+    <string name="hum">Hum</string>
+    <string name="gps_disabled">GPS Desativado</string>
+    <string name="want_to_activate">O GPS está desativado. Deseja ativá-lo?</string>
+    <string name="yes">Sim</string>
+    <string name="no">não</string>
+    <string name="location_permission">Permissão de Localização</string>
+    <string name="permission">Este aplicativo precisa acessar sua localização. Deseja permitir?</string>
+    <string name="we_need_your_permission">Para Usuabilidade desta aplicação, necessitamos da sua permissão.</string>
+    <string name="error_getting_location">Erro ao obter a localização</string>
+</resources>

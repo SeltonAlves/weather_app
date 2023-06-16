@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".view.MainActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="112dp"
+        android:layout_height="235dp"
+        android:layout_marginStart="-24dp"
+        android:layout_marginTop="90dp"
+        android:src="@drawable/vector_12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription,HardcodedText,VisualLintBounds" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="425dp"
+        android:layout_height="366dp"
+        android:layout_marginTop="-55dp"
+        android:layout_marginEnd="-70dp"
+        android:src="@drawable/vector_11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:src="@drawable/baseline_location_on_24"
+        android:tint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/text_location"
+        app:layout_constraintEnd_toStartOf="@id/text_location"
+        app:layout_constraintTop_toTopOf="@id/text_location" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="74dp"
+        android:fontFamily="@font/overpass_bold"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/image_search" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image_search"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="30dp"
+        android:src="@drawable/search_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/white" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image_icon_weather"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="68dp"
+        android:foregroundGravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_location" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="330dp"
+        android:layout_height="320dp"
+        android:background="@drawable/rounded_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="45dp"
+        app:layout_constraintTop_toBottomOf="@id/image_icon_weather" />
+
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_temperatures"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="0º"
+        android:textColor="@color/white"
+        android:textSize="80sp"
+        app:layout_constraintEnd_toEndOf="@id/view"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@id/view"
+        app:layout_constraintTop_toTopOf="@id/view"
+        android:layout_marginTop="15dp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_conditions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/overpass_bold"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@id/view"
+        app:layout_constraintStart_toStartOf="@id/view"
+        app:layout_constraintTop_toBottomOf="@id/text_temperatures" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image_windy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/windy"
+        app:layout_constraintTop_toBottomOf="@id/text_conditions"
+        app:layout_constraintStart_toStartOf="@id/view"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toStartOf="@id/text_windy"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_windy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/windy"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/overpass"
+        app:layout_constraintEnd_toStartOf="@id/view_space"
+        app:layout_constraintStart_toEndOf="@id/image_windy"
+        app:layout_constraintTop_toTopOf="@id/image_windy"
+        app:layout_constraintBottom_toBottomOf="@id/image_windy"/>
+
+    <View
+        android:id="@+id/view_space"
+        android:layout_width="3dp"
+        android:layout_height="14dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toEndOf="@id/text_windy"
+        app:layout_constraintTop_toTopOf="@id/text_windy"
+        app:layout_constraintEnd_toStartOf="@id/text_speed"
+        app:layout_constraintBottom_toBottomOf="@id/text_windy"/>
+    
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_speed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/text_windy"
+        app:layout_constraintBottom_toBottomOf="@id/text_windy"
+        app:layout_constraintTop_toTopOf="@id/text_windy"
+        android:fontFamily="@font/overpass"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:text="0 km/h"
+        app:layout_constraintEnd_toEndOf="@id/view"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image_hum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/hum"
+        app:layout_constraintTop_toBottomOf="@id/image_windy"
+        app:layout_constraintStart_toStartOf="@id/image_windy"
+        android:layout_marginTop="12dp"/>
+
+<androidx.appcompat.widget.AppCompatTextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toBottomOf="@id/text_windy"
+    app:layout_constraintStart_toStartOf="@id/text_windy"
+    android:layout_marginTop="10dp"
+    android:textColor="@color/white"
+    android:textSize="16sp"
+    android:fontFamily="@font/overpass"
+    android:text="@string/hum"/>
+
+    <View
+        android:id="@+id/view_space_two"
+        android:layout_width="3dp"
+        android:layout_height="14dp"
+        android:background="@color/white"
+       app:layout_constraintTop_toBottomOf="@id/view_space"
+        app:layout_constraintStart_toStartOf="@id/view_space"
+        app:layout_constraintEnd_toEndOf="@id/view_space"
+        android:layout_marginTop="20dp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_humidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/text_speed"
+        app:layout_constraintEnd_toEndOf="@id/text_speed"
+        app:layout_constraintTop_toBottomOf="@id/text_speed"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/overpass"
+        android:textColor="@color/white"
+        android:text="0 %"
+        android:textSize="16sp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
